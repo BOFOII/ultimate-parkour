@@ -1,3 +1,4 @@
 vendor/
 src/CortexPE/
 src/muqsit/
+phpstan.neon.dist
