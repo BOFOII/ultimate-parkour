@@ -24,7 +24,7 @@ class Parkour extends PluginBase {
         }
         $this->parkourManager = new ParkourManager($this);
         $this->provider = new YamlProvider($this);
-        Server::getInstance()->getCommandMap()->register("Utimate Parkour", new CommandExecutor($this, "parkour", "A command for parkour",[ "pk"]), "parkour");
+        Server::getInstance()->getCommandMap()->register("UtimateParkour", new CommandExecutor($this, "parkour", "A command for parkour",[ "pk"]), "parkour");
         Server::getInstance()->getPluginManager()->registerEvents(new ParkourListener(), $this);
         $this->getScheduler()->scheduleRepeatingTask(new ParkourTask(), 1);
     }
