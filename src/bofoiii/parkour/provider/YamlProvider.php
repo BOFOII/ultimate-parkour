@@ -47,6 +47,14 @@ class YamlProvider
         return isset($this->playersData[$player->getName()]);
     }
 
+    public function createPlayerData(Player $player): void
+    {
+        $this->playersData[$player->getName()] = 9999999999;
+        $config = new Config($this->getDataFolder() . self::PLAYER_DATA, Config::YAML);
+        $config->set($player->getName(), 9999999999);
+        $config->save();
+    }
+
     public function savePlayerData(Player $player, float|int $timer): void
     {
         if ($timer < $this->playersData[$player->getName()]) {

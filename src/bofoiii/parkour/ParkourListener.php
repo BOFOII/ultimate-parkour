@@ -19,7 +19,7 @@ class ParkourListener implements Listener {
     public function onJoin(PlayerJoinEvent $event): void
     {
         if(!Parkour::getInstance()->getProvider()->hasPlayerData($event->getPlayer())) {
-            Parkour::getInstance()->getProvider()->savePlayerData($event->getPlayer(), 9999999999);
+            Parkour::getInstance()->getProvider()->createPlayerData($event->getPlayer());
         }
 
         foreach(Parkour::getInstance()->getManager()->getDatas() as $data) {
