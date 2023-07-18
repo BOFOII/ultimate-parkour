@@ -1,0 +1,20 @@
+{
+    "name": "bofoiii/parkour",
+    "require": {
+        "pocketmine/pocketmine-mp": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "bofoiii\\parkour\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "BOFOII",
+            "email": "imzalpha3@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpstan/phpstan": "^1.10"
+    }
+}
